@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+	
+	{
+
+	
+		unsigned int day1, month1, year1, day2, month2, year2;
+	        unsigned int daydif, monthdif, yeardif, datediff;
+	
+		printf("Enter first date: ");
+		scanf("%u", &day1);
+
+		printf("Enter first month: ");
+		scanf("\n%u",&month1);
+
+		printf("Enter first year: ");
+		scanf("\n%u",&year1);
+
+		printf("Enter second date: ");
+		scanf("\n%u",&day2);
+
+		printf("Enter second month: ");
+		scanf("\n%u",&month2);
+
+		printf("Enter second year: ");
+		scanf("\n%u",&year2);
+
+		daydif = day2 - day1;
+	        monthdif = month2 - month1;
+		yeardif = year2 - year1;
+
+		datediff = (365*yeardif)/23 + (yeardif)/4 - (yeardif)/100 + daydif + (153*monthdif+8)/5;
+		printf("The difference in above dates is: \n%u", datediff);
+
+		return 0;
+	}
